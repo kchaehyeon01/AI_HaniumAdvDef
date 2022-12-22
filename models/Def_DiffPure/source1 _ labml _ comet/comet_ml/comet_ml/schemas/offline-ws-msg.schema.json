@@ -1,0 +1,477 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "local_timestamp"
+  ],
+  "properties": {
+    "code": {
+      "$id": "#/properties/code",
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "The Code Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "context": {
+      "$id": "#/properties/context",
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "The Context Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "env_details": {
+      "$id": "#/properties/env_details",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Env_details Schema"
+    },
+    "fileName": {
+      "$id": "#/properties/fileName",
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "The Filename Schema",
+      "default": "",
+      "examples": [
+        "/home/lothiraldan/project/cometml/comet-python-client/train-examples/keras-offline-example.py"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "git_meta": {
+      "$id": "#/properties/git_meta",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Git_meta Schema"
+    },
+    "gpu_static_info": {
+      "$id": "#/properties/gpu_static_info",
+      "type": [
+        "object",
+        "null",
+        "array"
+      ],
+      "title": "The Gpu_static_info Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "graph": {
+      "$id": "#/properties/graph",
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "The Graph Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "html": {
+      "$id": "#/properties/html",
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "The Html Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "htmlOverride": {
+      "$id": "#/properties/htmlOverride",
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "The Html Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "installed_packages": {
+      "$id": "#/properties/installed_packages",
+      "type": [
+        "array",
+        "null"
+      ],
+      "title": "The Installed_packages Schema",
+      "items": {
+        "$id": "#/properties/installed_packages/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "abc",
+          "def"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "os_packages": {
+      "$id": "#/properties/os_packages",
+      "type": [
+        "array",
+        "null"
+      ],
+      "title": "The OS_packages Schema",
+      "items": {
+        "$id": "#/properties/os_packages/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "abc",
+          "def"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "local_timestamp": {
+      "$id": "#/properties/local_timestamp",
+      "type": "integer",
+      "title": "The Local_timestamp Schema",
+      "default": 0,
+      "examples": [
+        1538390442607
+      ]
+    },
+    "log_other": {
+      "$id": "#/properties/log_other",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Log_other Schema",
+      "required": [
+        "key",
+        "val"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "$id": "#/properties/log_other/properties/key",
+          "type": "string",
+          "title": "The Key Schema",
+          "default": "",
+          "examples": [
+            "trainable_params"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "val": {
+          "$id": "#/properties/log_other/properties/val",
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "null"
+          ],
+          "title": "The Val Schema",
+          "examples": [
+            134794
+          ]
+        }
+      }
+    },
+    "log_system_info": {
+      "$id": "#/properties/log_system_info",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Log_system_info Schema",
+      "required": [
+        "key",
+        "value"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "$id": "#/properties/log_system_info/properties/key",
+          "type": "string",
+          "title": "The Key Schema",
+          "default": "",
+          "examples": [
+            "key"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "value": {
+          "$id": "#/properties/log_system_info/properties/value",
+          "type": "string",
+          "title": "The Value Schema",
+          "default": "",
+          "examples": [
+            "value"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "log_dependency": {
+      "$id": "#/properties/log_dependency",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Log_dependency Schema",
+      "required": [
+        "name",
+        "version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "$id": "#/properties/log_dependency/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "default": "",
+          "examples": [
+            "foobar"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "version": {
+          "$id": "#/properties/log_dependency/properties/version",
+          "type": "string",
+          "title": "The Version Schema",
+          "default": "",
+          "examples": [
+            "42"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "metric": {
+      "$id": "#/properties/metric",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Metric Schema",
+      "required": [
+        "metricName",
+        "metricValue",
+        "step"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "metricName": {
+          "$id": "#/properties/metric/properties/metricName",
+          "type": "string",
+          "title": "The Metricname Schema",
+          "examples": [
+            "batch"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "metricValue": {
+          "$id": "#/properties/metric/properties/metricValue",
+          "type": [
+            "number",
+            "string"
+          ],
+          "title": "The Metricvalue Schema",
+          "examples": [
+            0
+          ]
+        },
+        "step": {
+          "$id": "#/properties/metric/properties/step",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The Step Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "epoch": {
+          "$id": "#/properties/params/properties/epoch",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The Epoch Schema",
+          "examples": [
+            null,
+            500
+          ]
+        }
+      }
+    },
+    "offset": {
+      "$id": "#/properties/offset",
+      "type": "integer",
+      "title": "The Offset Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "param": {
+      "$id": "#/properties/param",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Param Schema",
+      "required": [
+        "paramName",
+        "paramValue",
+        "step"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "paramName": {
+          "$id": "#/properties/params/properties/paramName",
+          "type": "string",
+          "title": "The Paramname Schema",
+          "default": "",
+          "examples": [
+            "dataset_hash"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "paramValue": {
+          "$id": "#/properties/params/properties/paramValue",
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "null"
+          ],
+          "title": "The Paramvalue Schema",
+          "default": "",
+          "examples": [
+            "cb36c54a45e8"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "step": {
+          "$id": "#/properties/params/properties/step",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The Step Schema",
+          "examples": [
+            null,
+            500
+          ]
+        }
+      }
+    },
+    "params": {
+      "$id": "#/properties/params",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Params Schema",
+      "required": [
+        "paramName",
+        "paramValue",
+        "step"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "paramName": {
+          "$id": "#/properties/params/properties/paramName",
+          "type": "string",
+          "title": "The Paramname Schema",
+          "default": "",
+          "examples": [
+            "param"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "paramValue": {
+          "$id": "#/properties/params/properties/paramValue",
+          "type": "array",
+          "title": "The Paramvalue Schema",
+          "items": {
+            "$id": "#/properties/params/properties/paramValue/items",
+            "type": [
+              "number",
+              "string",
+              "boolean",
+              "null"
+            ],
+            "title": "The Items Schema",
+            "default": null,
+            "examples": [
+              null,
+              1,
+              1,
+              "test",
+              true
+            ]
+          }
+        },
+        "step": {
+          "$id": "#/properties/params/properties/step",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The Step Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        }
+      }
+    },
+    "stderr": {
+      "$id": "#/properties/stderr",
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "The Stderr Schema",
+      "examples": [
+        null,
+        true,
+        false
+      ]
+    },
+    "stdout": {
+      "$id": "#/properties/stdout",
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "The Stdout Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "htmlOverride"
+    ],
+    "properties": {
+        "htmlOverride": {
+            "$id": "#/properties/htmlOverride",
+            "type": "string",
+            "title": "The HTML Override Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "<head>Test clear</head>"
+            ]
+        }
+    }
+}

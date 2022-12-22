@@ -1,0 +1,247 @@
+{
+    "$id": "http://example.com/example.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "default": {},
+    "description": "The root schema comprises the entire JSON document.",
+    "examples": [
+        {
+            "position": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "size": {
+                "height": 1,
+                "width": 1,
+                "depth": 1
+            },
+            "rotation": {
+                "alpha": -3.14,
+                "beta": 1,
+                "gamma": 0
+              },
+            "label": "prediction",
+            "color": [
+                1,
+                0,
+                0
+            ],
+            "probability": 0.96,
+            "class": "1"
+        }
+    ],
+    "required": [
+        "position",
+        "size",
+        "label"
+    ],
+    "title": "The root schema",
+    "type": "object",
+    "properties": {
+        "position": {
+            "$id": "#/properties/position",
+            "default": [],
+            "description": "The center of the box, as an array of [X, Y, Z].",
+            "examples": [
+                [
+                    0.5,
+                    0.5,
+                    0.5
+                ]
+            ],
+            "title": "The position schema",
+            "maxLength": 3,
+            "minLength": 3,
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/position/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/position/items/anyOf/0",
+                        "type": "number",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0.0,
+                        "examples": [
+                            0.5
+                        ]
+                    }
+                ]
+            }
+        },
+        "size": {
+            "$id": "#/properties/size",
+            "type": "object",
+            "title": "The size schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "height": 1,
+                    "width": 1,
+                    "depth": 1
+                }
+            ],
+            "required": [
+                "height",
+                "width",
+                "depth"
+            ],
+            "properties": {
+                "height": {
+                    "$id": "#/properties/size/properties/height",
+                    "type": "number",
+                    "title": "The height schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "width": {
+                    "$id": "#/properties/size/properties/width",
+                    "type": "number",
+                    "title": "The width schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "depth": {
+                    "$id": "#/properties/size/properties/depth",
+                    "type": "number",
+                    "title": "The depth schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "rotation": {
+            "$id": "#/properties/rotation",
+            "type": ["object", "null"],
+            "title": "The rotation schema",
+            "description": "The rotation around the box center.",
+            "default": {},
+            "examples": [
+                {
+                    "alpha": -3.14,
+                    "beta": 1,
+                    "gamma": 0
+                }
+            ],
+            "required": [
+                "alpha",
+                "beta",
+                "gamma"
+            ],
+            "properties": {
+                "alpha": {
+                    "$id": "#/properties/rotation/properties/alpha",
+                    "type": "number",
+                    "title": "The alpha schema",
+                    "description": "The rotation against the X axis, in radians.",
+                    "default": 0.0,
+                    "examples": [
+                        -3.14
+                    ]
+                },
+                "beta": {
+                    "$id": "#/properties/rotation/properties/beta",
+                    "type": "number",
+                    "title": "The beta schema",
+                    "description": "The rotation against the Y axis, in radians.",
+                    "default": 0.0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "gamma": {
+                    "$id": "#/properties/rotation/properties/gamma",
+                    "type": "number",
+                    "title": "The gamma schema",
+                    "description": "The rotation against the Z axis, in radians.",
+                    "default": 0.0,
+                    "examples": [
+                        0
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "label": {
+            "$id": "#/properties/label",
+            "type": "string",
+            "title": "The label schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "prediction"
+            ]
+        },
+        "color": {
+            "$id": "#/properties/color",
+            "default": [],
+            "description": "Box edge color as array of [R, G, B].",
+            "examples": [
+                [
+                    1,
+                    0,
+                    0.5
+                ]
+            ],
+            "title": "The color schema",
+            "maxLength": 3,
+            "minLength": 3,
+            "type": ["array", "null"],
+            "additionalItems": false,
+            "items": {
+                "$id": "#/properties/color/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/color/items/anyOf/0",
+                        "default": 0,
+                        "description": "An explanation about the purpose of this instance.",
+                        "examples": [
+                            1,
+                            0,
+                            0.5
+                        ],
+                        "maximum": 1,
+                        "minimum": 0,
+                        "title": "The first anyOf schema",
+                        "type": "number"
+                    }
+                ]
+            }
+        },
+        "probability": {
+            "$id": "#/properties/probability",
+            "default": 0.0,
+            "description": "An explanation about the purpose of this instance.",
+            "examples": [
+                0.96
+            ],
+            "title": "The probability schema",
+            "maximum": 1,
+            "minimum": 0,
+            "type": ["number", "null"]
+        },
+        "class": {
+            "$id": "#/properties/class",
+            "type": ["string", "null"],
+            "title": "The class schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "1"
+            ]
+        }
+    },
+    "additionalProperties": true
+}

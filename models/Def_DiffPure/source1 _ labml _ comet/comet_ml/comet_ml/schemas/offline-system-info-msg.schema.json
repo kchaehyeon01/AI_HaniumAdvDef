@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": [
+      "system_info"
+  ],
+  "properties": {
+      "system_info": {
+        "$id": "#/properties/system_info",
+        "type": "object",
+        "title": "The git_metadata Schema",
+        "default": {},
+        "required": [
+            "key",
+            "value"
+        ],
+        "properties": {
+        "key": {
+            "$id": "#/properties/system_info/properties/key",
+            "type": "string",
+            "title": "The Key Schema",
+            "default": "",
+            "examples": [
+            "key"
+            ]
+        },
+        "value": {
+            "$id": "#/properties/system_info/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "default": "",
+            "examples": [
+            "value"
+            ]
+        }
+        }
+      }
+    }
+}

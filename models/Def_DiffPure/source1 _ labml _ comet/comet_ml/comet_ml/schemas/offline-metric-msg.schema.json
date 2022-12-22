@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The metric message schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "local_timestamp": 1634730947159,
+      "context": "train",
+      "metric": {
+        "metricName": "loss",
+        "metricValue": 0,
+        "step": null,
+        "epoch": null
+      }
+    }
+  ],
+  "required": [
+    "local_timestamp"
+  ],
+  "properties": {
+    "context": {
+        "$id": "#/properties/context",
+        "type": ["string", "null"],
+        "title": "The context schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+            "train"
+        ]
+    },
+    "local_timestamp": {
+      "$id": "#/properties/local_timestamp",
+      "type": "integer",
+      "title": "The local_timestamp schema",
+      "default": 0,
+      "examples": [
+        1634730947159
+      ]
+    },
+    "metric": {
+      "$id": "#/properties/metric",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Metric Schema",
+      "required": [
+        "metricName",
+        "metricValue",
+        "step"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "metricName": {
+          "$id": "#/properties/metric/properties/metricName",
+          "type": "string",
+          "title": "The Metric name Schema",
+          "examples": [
+            "batch"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "metricValue": {
+          "$id": "#/properties/metric/properties/metricValue",
+          "type": [
+            "number",
+            "string"
+          ],
+          "title": "The Metric value Schema",
+          "examples": [
+            0
+          ]
+        },
+        "step": {
+          "$id": "#/properties/metric/properties/step",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The Step Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "epoch": {
+          "$id": "#/properties/metric/properties/epoch",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The Epoch Schema",
+          "examples": [
+            null,
+            500
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "project_name",
+    "start_time",
+    "stop_time",
+    "tags",
+    "workspace"
+  ],
+  "properties": {
+    "project_name": {
+      "$id": "#/properties/project_name",
+      "type": ["string", "null"],
+      "title": "The Project_name Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "workspace": {
+      "$id": "#/properties/workspace",
+      "type": ["string", "null"],
+      "title": "The Workspace Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "offline_id": {
+      "$id": "#/properties/offline_id",
+      "type": "string",
+      "title": "The Offline_id Schema",
+      "default": null,
+      "examples": [
+        "45ab6d5b027f4688ab5467656a0614b8"
+      ]
+    },
+    "start_time": {
+      "$id": "#/properties/start_time",
+      "type": "integer",
+      "title": "The Start_time Schema"
+    },
+    "stop_time": {
+      "$id": "#/properties/stop_time",
+      "type": "integer",
+      "title": "The Stop_time Schema"
+    },
+    "tags": {
+      "$id": "#/properties/tags",
+      "type": "array",
+      "title": "The Tags Schema",
+      "items": {
+        "$id": "#/properties/tags/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "tag1",
+          "tag2",
+          "tag3"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "mode": {
+      "$id": "#/properties/mode",
+      "type": "string",
+      "title": "The Mode Schema, deprecated",
+      "default": "create",
+      "enum": ["create", "append"],
+      "examples": [
+        "create",
+        "append"
+      ]
+    },
+    "resume_strategy": {
+      "$id": "#/properties/resume_strategy",
+      "type": "string",
+      "title": "The Resume Strategy Schema",
+      "default": "create",
+      "enum": ["create", "get", "get_or_create"],
+      "examples": [
+        "create",
+        "get", "get_or_create"
+      ]
+    },
+    "customer_error_reported": {
+      "$id": "#/properties/customer_error_reported",
+      "type": "boolean",
+      "title": "The flag to indicate that customer error was detected",
+      "default": false
+    },
+    "customer_error_message": {
+      "$id": "#/properties/customer_error_message",
+      "type": ["string", "null"],
+      "title": "The error message",
+      "default": null,
+      "examples": [
+        "error string",
+        null
+      ]
+    }
+  }
+}
+

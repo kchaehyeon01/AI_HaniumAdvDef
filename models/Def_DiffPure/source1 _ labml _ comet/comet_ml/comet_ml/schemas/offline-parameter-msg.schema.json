@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The parameter message schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "local_timestamp": 1634730947159,
+      "param": {
+        "paramName": "loss",
+        "paramValue": 0,
+        "step": null
+      }
+    }
+  ],
+  "required": [
+    "local_timestamp"
+  ],
+  "properties": {
+    "context": {
+        "$id": "#/properties/context",
+        "type": ["string", "null"],
+        "title": "The context schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+            "train"
+        ]
+    },
+    "local_timestamp": {
+      "$id": "#/properties/local_timestamp",
+      "type": "integer",
+      "title": "The local_timestamp schema",
+      "default": 0,
+      "examples": [
+        1634730947159
+      ]
+    },
+    "param": {
+      "$id": "#/properties/param",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The param schema",
+      "examples": [
+        {
+          "paramName": "loss",
+          "paramValue": 0.42,
+          "step": 0
+        }
+      ],
+      "required": [
+        "paramName",
+        "paramValue",
+        "step"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "paramName": {
+          "$id": "#/properties/param/properties/paramName",
+          "type": "string",
+          "title": "The paramName schema",
+          "default": "",
+          "examples": [
+            "loss"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "paramValue": {
+          "$id": "#/properties/param/properties/paramValue",
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "null"
+          ],
+          "title": "The paramValue schema",
+          "default": "",
+          "examples": [
+            0.8
+          ]
+        },
+        "step": {
+          "$id": "#/properties/param/properties/step",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The step schema",
+          "default": 0,
+          "examples": [
+            null,
+            1
+          ]
+        }
+      }
+    },
+    "params": {
+      "$id": "#/properties/params",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Params Schema",
+      "required": [
+        "paramName",
+        "paramValue",
+        "step"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "paramName": {
+          "$id": "#/properties/params/properties/paramName",
+          "type": "string",
+          "title": "The paramName Schema",
+          "default": "",
+          "examples": [
+            "param"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "paramValue": {
+          "$id": "#/properties/params/properties/paramValue",
+          "type": "array",
+          "title": "The Paramvalue Schema",
+          "items": {
+            "$id": "#/properties/params/properties/paramValue/items",
+            "type": [
+              "number",
+              "string",
+              "boolean",
+              "null"
+            ],
+            "title": "The Items Schema",
+            "default": null,
+            "examples": [
+              null,
+              1,
+              1,
+              "test",
+              true
+            ]
+          }
+        },
+        "step": {
+          "$id": "#/properties/params/properties/step",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The Step Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        }
+      }
+    }
+  }
+}

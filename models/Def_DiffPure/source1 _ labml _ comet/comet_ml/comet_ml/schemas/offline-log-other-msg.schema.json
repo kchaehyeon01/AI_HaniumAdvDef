@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "key",
+        "value"
+    ],
+    "properties": {
+        "key": {
+            "$id": "#/properties/key",
+            "title": "The key Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+        },
+        "value": {
+            "$id": "#/properties/value",
+            "title": "The value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+        }
+    }
+}

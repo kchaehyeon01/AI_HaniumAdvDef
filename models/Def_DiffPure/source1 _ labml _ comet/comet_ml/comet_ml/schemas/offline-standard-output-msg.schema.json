@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": [
+    "output",
+    "stderr",
+    "local_timestamp"
+  ],
+  "properties": {
+    "stderr": {
+      "$id": "#/properties/stderr",
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "The Stderr Schema",
+      "examples": [
+        null,
+        true,
+        false
+      ]
+    },
+    "output": {
+      "$id": "#/properties/output",
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "The Output Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "local_timestamp": {
+      "$id": "#/properties/local_timestamp",
+      "type": "integer",
+      "title": "The Local_timestamp Schema",
+      "default": 0,
+      "examples": [
+        1538390442607
+      ]
+    },
+    "context": {
+      "$id": "#/properties/context",
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "The Context Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "graph"
+    ],
+    "properties": {
+        "graph": {
+            "$id": "#/properties/graph",
+            "type": "string",
+            "title": "The Graph Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "{\n\"backend\": \"tensorflow\",\n\"class_name\": \"Sequential\"}"
+            ]
+        }
+    }
+}

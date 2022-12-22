@@ -1,0 +1,2 @@
+[console_scripts]
+comet = comet_ml.scripts.comet:main

@@ -1,0 +1,193 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "pid",
+        "hostname",
+        "os",
+        "os_type",
+        "python_version_verbose",
+        "python_version",
+        "user",
+        "ip",
+        "command",
+        "python_exe",
+        "env"
+    ],
+    "properties": {
+        "pid": {
+            "$id": "#/properties/pid",
+            "type": "integer",
+            "title": "The Pid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1226279
+            ]
+        },
+        "hostname": {
+            "$id": "#/properties/hostname",
+            "type": "string",
+            "title": "The Hostname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "localhost.localdomain"
+            ]
+        },
+        "machine": {
+            "$id": "#/properties/machine",
+            "type": "string",
+            "title": "The Machine Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "x86_64"
+            ]
+        },
+        "os": {
+            "$id": "#/properties/os",
+            "type": "string",
+            "title": "The Os Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Linux-5.5.9-200.fc31.x86_64-x86_64-with-fedora-31-Thirty_One"
+            ]
+        },
+        "os_release": {
+            "$id": "#/properties/os_release",
+            "type": "string",
+            "title": "The Os_release Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "8"
+            ]
+        },
+        "os_type": {
+            "$id": "#/properties/os_type",
+            "type": "string",
+            "title": "The Os_type Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Linux"
+            ]
+        },
+        "processor": {
+            "$id": "#/properties/processor",
+            "type": "string",
+            "title": "The Processor Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "x86_64"
+            ]
+        },
+        "python_version_verbose": {
+            "$id": "#/properties/python_version_verbose",
+            "type": "string",
+            "title": "The Python_version_verbose Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "3.7.5 (default, Nov 25 2019, 10:09:43) \\n[GCC 9.2.1 20190827 (Red Hat 9.2.1-1)]"
+            ]
+        },
+        "python_version": {
+            "$id": "#/properties/python_version",
+            "type": "string",
+            "title": "The Python_version Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "3.7.5"
+            ]
+        },
+        "user": {
+            "$id": "#/properties/user",
+            "type": "string",
+            "title": "The User Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "user"
+            ]
+        },
+        "network_interfaces_ips": {
+            "$id": "#/properties/network_interfaces_ips",
+            "type": "array",
+            "title": "The Network_interfaces_ips Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/network_interfaces_ips/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                    "127.0.0.1",
+                    "192.168.13.4"
+                ]
+            }
+        },
+        "ip": {
+            "$id": "#/properties/ip",
+            "type": "string",
+            "title": "The Ip Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "192.168.13.4"
+            ]
+        },
+        "command": {
+            "$id": "#/properties/command",
+            "type": "array",
+            "title": "The Command Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/command/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                    "/home/user/.virtualenvs/comet3.7/bin/ipython"
+                ]
+            }
+        },
+        "python_exe": {
+            "$id": "#/properties/python_exe",
+            "type": "string",
+            "title": "The Python_exe Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "/home/user/.virtualenvs/comet3.7/bin/python"
+            ]
+        },
+        "env": {
+            "$id": "#/properties/env",
+            "type": [
+              "object",
+              "null"
+            ],
+            "title": "The Env Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "FOO": "BAR",
+                    "HOME": "USER"
+                }
+            ]
+        }
+    }
+}

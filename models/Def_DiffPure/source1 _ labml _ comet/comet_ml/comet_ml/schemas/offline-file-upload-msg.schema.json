@@ -1,0 +1,165 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "additional_params",
+    "file_path",
+    "local_timestamp",
+    "upload_type"
+  ],
+  "properties": {
+    "additional_params": {
+      "$id": "#/properties/additional_params",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Additional_params Schema",
+      "required": [
+        "context",
+        "step"
+      ],
+      "properties": {
+        "assetId": {
+          "$id": "#/properties/additional_params/properties/assetId",
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "The assetId Schema",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "context": {
+          "$id": "#/properties/additional_params/properties/context",
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "The Context Schema",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "figCounter": {
+          "$id": "#/properties/additional_params/properties/figCounter",
+          "type": "integer",
+          "title": "The Figcounter Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "figName": {
+          "$id": "#/properties/additional_params/properties/figName",
+          "type": "string",
+          "title": "The Figname Schema",
+          "default": "",
+          "examples": [
+            "logo_comet_dark.png"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "fileName": {
+          "$id": "#/properties/additional_params/properties/fileName",
+          "type": "string",
+          "title": "The fileName Schema",
+          "default": "",
+          "examples": [
+            "logo_comet_dark.png"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "overwrite": {
+          "$id": "#/properties/additional_params/properties/overwrite",
+          "type": "boolean",
+          "title": "The overwrite Schema",
+          "default": "false"
+        },
+        "step": {
+          "$id": "#/properties/additional_params/properties/step",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The Step Schema",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "epoch": {
+          "$id": "#/properties/additional_params/properties/epoch",
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "The Epoch Schema",
+          "default": null,
+          "examples": [
+            null
+          ]
+        }
+      }
+    },
+    "clean": {
+      "$id": "#/properties/clean",
+      "type": "boolean",
+      "title": "The clean Schema",
+      "default": true
+    },
+    "file_path": {
+      "$id": "#/properties/file_path",
+      "type": "string",
+      "title": "The File_path Schema",
+      "default": "",
+      "examples": [
+        "tmpynbcpbni"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "local_timestamp": {
+      "$id": "#/properties/local_timestamp",
+      "type": "integer",
+      "title": "The Local_timestamp Schema",
+      "default": 0,
+      "examples": [
+        1539010149906
+      ]
+    },
+    "metadata": {
+      "$id": "#/properties/metadata",
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "The Metadata Schema",
+      "additionalProperties": true
+    },
+    "offset": {
+      "$id": "#/properties/offset",
+      "type": "integer",
+      "title": "The Offset Schema",
+      "default": 0,
+      "examples": [
+        7
+      ]
+    },
+    "upload_type": {
+      "$id": "#/properties/upload_type",
+      "type": "string",
+      "title": "The Upload_type Schema",
+      "default": "",
+      "examples": [
+        "visualization"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

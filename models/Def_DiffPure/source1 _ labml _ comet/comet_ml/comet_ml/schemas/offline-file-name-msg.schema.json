@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "file_name"
+    ],
+    "properties": {
+        "file_name": {
+            "$id": "#/properties/file_name",
+            "type": "string",
+            "title": "The file_name Schema",
+            "description": "The path of the file that was used to run the experiment.",
+            "default": "",
+            "examples": [
+                "C:/",
+                "home/*"
+            ]
+        }
+    }
+}

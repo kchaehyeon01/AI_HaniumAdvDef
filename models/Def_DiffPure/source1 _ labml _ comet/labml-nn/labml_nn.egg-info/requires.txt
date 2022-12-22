@@ -1,0 +1,7 @@
+labml>=0.4.153
+labml-helpers>=0.4.88
+torch
+torchtext
+torchvision
+einops
+numpy
